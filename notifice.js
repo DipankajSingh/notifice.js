@@ -29,15 +29,15 @@ function notifice(msg = '', RGB = { R: 255, G: 255, B: 255 }, pos = 'bottom', ty
             border: 1px solid rgb(${RGB.R}, ${RGB.G}, ${RGB.B});`;
     const s8 = `cursor: pointer;
             background-color: rgb(${RGB.R}, ${RGB.G}, ${RGB.B});`;
-    const notificeContainer = GiveElement('div', 'notificeContainer');
+    const notificeContainer = GiveElement('div');
     notificeContainer.style = s1 + s2 + s3 + s7;
-    const notificeText = GiveElement('p', 'notificeText', msg);
+    const notificeText = GiveElement('p', undefined, msg);
     notificeText.style = s3 + s4;
     notificeContainer.appendChild(notificeText);
     if (type === 'prompt') {
-        const notificeButtons = GiveElement('div', 'notificeButtons');
+        const notificeButtons = GiveElement('div');
         notificeButtons.style = s1 + s5;
-        const notificeOk = GiveElement('button', 'notificeOk', 'Ok');
+        const notificeOk = GiveElement('button', undefined, 'Ok');
 
         notificeOk.addEventListener('click', () => {
             try {
@@ -51,7 +51,7 @@ function notifice(msg = '', RGB = { R: 255, G: 255, B: 255 }, pos = 'bottom', ty
                 }
             }
         });
-        const notificeCancel = GiveElement('button', 'notificeCancel', 'Cancel');
+        const notificeCancel = GiveElement('button', undefined, 'Cancel');
         [notificeOk, notificeCancel].forEach((e) => {
             e.style = s6 + s7;
             e.addEventListener('mouseover', () => {
@@ -81,27 +81,4 @@ function notifice(msg = '', RGB = { R: 255, G: 255, B: 255 }, pos = 'bottom', ty
         }, 2000);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export { notifice as default }
