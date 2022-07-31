@@ -1,15 +1,19 @@
 'use strict'
 import { GiveElement, $ } from './utils.js'
-class Notifice {
+export default class Notifice {
     #textValue
     #postionValue = 'bottom-right'
     #MsgType = 'alert'
     #callback
     #clr = [30, 250, 70]
     constructor(obj) {
-        Object.entries(obj).forEach(([key, value]) => {
-            this[key] = value
-        })
+        try {
+            Object.entries(obj).forEach(([key, value]) => {
+                this[key] = value
+            })
+        } catch (error) {
+            console.warn('Give an Empty object Atleast!', error)
+        }
     }
 
     stay(value) {
@@ -35,19 +39,26 @@ class Notifice {
         this.#textValue = value
     }
     show() {
-        let clr = `rgba(${this.#clr[0]},${this.#clr[1]},${this.#clr[2]}`
+        let clr = `rgb(${this.#clr[0] - 50},${this.#clr[1] - 60},${this.#clr[2]},.95)`
+        let btnClr = `rgb(${this.#clr[0]},${this.#clr[1]},${this.#clr[2]})`
+        let brdClr = `rgb(${this.#clr[0] - 150},${this.#clr[1] - 150},${this.#clr[2] - 150})`
         const pTag = GiveElement('p', undefined, this.#textValue)
         const notificeCard = GiveElement('div', 'notifice-card')
-        notificeCard.style.backgroundColor = clr + ',.4)';
-        notificeCard.style.borderColor = clr + ')'
+
+        notificeCard.style.backgroundColor = clr;
+
+        notificeCard.style.borderColor = brdClr
+
         const bTag = GiveElement('button', undefined, 'h&#xD7')
-        bTag.style.borderColor = clr + ')'
-        bTag.style.backgroundColor = clr + ',.6)'
+
+        bTag.style.borderColor = brdClr
+
+        bTag.style.backgroundColor = btnClr
         bTag.addEventListener('mousemove', () => {
-            bTag.style.backgroundColor = clr + ')'
+            bTag.style.backgroundColor = `rgb(${this.#clr[0] + 120},${this.#clr[1] + 20},${this.#clr[2] + 20})`
         })
         bTag.addEventListener('mouseleave', () => {
-            bTag.style.backgroundColor = clr + ',.6)'
+            bTag.style.backgroundColor = btnClr
         })
         bTag.addEventListener('click', () => {
             if (this.#callback) {
@@ -99,15 +110,3 @@ function createCon(pos) {
     document.body.append(el)
     return el
 }
-let notify = new Notifice({
-    text: 'this is the message!'
-})
-notify.show()
-notify.show()
-$('.bu').addEventListener('click', () => {
-    notify.stay(3000)
-    notify.onClick = () => {
-        console.log('hello from button!')
-    }
-    notify.show()
-})
