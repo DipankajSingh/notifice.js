@@ -11,10 +11,9 @@ export default class Notifice {
             Object.entries(obj).forEach(([key, value]) => {
                 this[key] = value
             })
-        } catch (error) {
-            console.warn('Give an Empty object Atleast!', error)
-        }
-    }
+        } catch(e){
+         This.error=e
+}
 
     stay(value) {
         this.autoClose = value
