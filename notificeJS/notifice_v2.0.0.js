@@ -1,5 +1,5 @@
 'use strict'
-import { GiveElement, $ } from './utils.js'
+import { GiveElement, $ } from './utils.js';
 export default class Notifice {
     #textValue
     #postionValue = 'bottom-right'
@@ -11,9 +11,10 @@ export default class Notifice {
             Object.entries(obj).forEach(([key, value]) => {
                 this[key] = value
             })
-        } catch(e){
-         This.error=e
-}
+        } catch (e) {
+            console.log(e)
+        }
+    }
 
     stay(value) {
         this.autoClose = value
@@ -37,11 +38,12 @@ export default class Notifice {
     set text(value) {
         this.#textValue = value
     }
-    show() {
+    show(text = this.#textValue) {
         let clr = `rgb(${this.#clr[0] - 50},${this.#clr[1] - 60},${this.#clr[2]},.95)`
         let btnClr = `rgb(${this.#clr[0]},${this.#clr[1]},${this.#clr[2]})`
         let brdClr = `rgb(${this.#clr[0] - 150},${this.#clr[1] - 150},${this.#clr[2] - 150})`
-        const pTag = GiveElement('p', undefined, this.#textValue)
+
+        const pTag = GiveElement('p', undefined, text)
         const notificeCard = GiveElement('div', 'notifice-card')
 
         notificeCard.style.backgroundColor = clr;
@@ -103,9 +105,17 @@ export default class Notifice {
     }
 
 }
+
 function createCon(pos) {
     const el = GiveElement('div', 'notifice-container')
     el.dataset.position = pos
     document.body.append(el)
     return el
 }
+
+
+const stylesheet = document.createElement('link')
+stylesheet.rel = 'stylesheet'
+stylesheet.type = 'text/css'
+stylesheet.href = './notificeJS/styles.css'
+document.head.appendChild(stylesheet)
