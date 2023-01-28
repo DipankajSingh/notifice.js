@@ -33,8 +33,5 @@
   "bugs": {
     "url": "https://github.com/DipankajSingh/notifice.js/issues"
   },
-  "homepage": "https://github.com/DipankajSingh/notifice.js#readme",
-  "dependencies": {
-    "ncp": "^2.0.0"
-  }
+  "homepage": "https://github.com/DipankajSingh/notifice.js#readme"
 }
