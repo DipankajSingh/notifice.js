@@ -88,6 +88,6 @@ const notification = new Notifice({
 notification.show();
 ```
 
-##Conclusion
+## Conclusion
 
 notificeJS is a simple and easy-to-use library for creating and displaying notifications on your web page. With its flexibility and customizable options, notificeJS is a great tool for adding notifications to your web projects.
