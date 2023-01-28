@@ -76,6 +76,6 @@ And here is an example of how you can display an error notification in the botto
 
     notification.show();
 
-##Conclusion
+## Conclusion
 
 notificeJS is a simple and easy-to-use library for creating and displaying notifications on your web page. With its flexibility and customizable options, notificeJS is a great tool for adding notifications to your web projects.
