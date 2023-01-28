@@ -1,7 +1,6 @@
 'use strict';
 import { GiveElement } from './utils.js';
 function notifice(msg = '', RGB = { R: 255, G: 255, B: 255 }, pos = 'bottom', type = 'alert', Callback) {
-    v
     const s1 = `display: flex;
             flex-direction: row;
             align-items: center;`;
