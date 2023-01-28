@@ -50,7 +50,7 @@ Once you have created a new instance of the **Notifice** class, you can display 
 
     notification.show();
 
-#Examples
+# Examples
 
 Here is an example of how you can use notificeJS to display a success notification in the top-right corner of the screen:
 
