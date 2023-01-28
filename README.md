@@ -15,7 +15,9 @@ To use notificeJS, you will need to include the library in your project. You can
 
 #### HTML
 
-    <script src="./notificeJS/notificeJS.js"></script>
+```html
+<script src="./notificeJS/notificeJS.js"></script>
+```
 
 ### Using NPM
 
@@ -24,7 +26,9 @@ To use notificeJS, you will need to include the library in your project. You can
 
 #### javascript
 
-    import notificeJS from 'notificeJS';
+```js
+import notificeJS from "notificeJS";
+```
 
 ## Usage
 
@@ -32,11 +36,13 @@ To use notificeJS, you will need to create a new instance of the **Notifice** cl
 
 #### javascript
 
-    const notification = new Notifice({
-    message: 'Hello, World!',
-    type: 'success',
-    position: 'top-right'
-    });
+```js
+const notification = new Notifice({
+  message: "Hello, World!",
+  type: "success",
+  position: "top-right",
+});
+```
 
 The Notifice class accepts an options object, which can contain the following properties:
 
@@ -48,7 +54,9 @@ Once you have created a new instance of the **Notifice** class, you can display 
 
 #### javascript
 
-    notification.show();
+```js
+notification.show();
+```
 
 # Examples
 
@@ -56,25 +64,29 @@ Here is an example of how you can use notificeJS to display a success notificati
 
 #### javascript
 
-    const notification = new Notifice({
-    message: 'Task completed successfully!',
-    type: 'success',
-    position: 'top-right'
-    });
+```js
+const notification = new Notifice({
+  message: "Task completed successfully!",
+  type: "success",
+  position: "top-right",
+});
 
-    notification.show();
+notification.show();
+```
 
 And here is an example of how you can display an error notification in the bottom-left corner of the screen:
 
 #### javascript
 
-    const notification = new Notifice({
-    message: 'An error occurred',
-    type: 'error',
-    position: 'bottom-left'
-    });
+```js
+const notification = new Notifice({
+  message: "An error occurred",
+  type: "error",
+  position: "bottom-left",
+});
 
-    notification.show();
+notification.show();
+```
 
 ##Conclusion
 
