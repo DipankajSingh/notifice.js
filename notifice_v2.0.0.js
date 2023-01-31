@@ -1,5 +1,5 @@
 'use strict'
-import { GiveElement, $ } from './utils.js';
+import { giveElement, $ } from '@itsdipankaj/helperjs';
 export default class Notifice {
     #textValue
     #postionValue = 'bottom-right'
@@ -43,14 +43,14 @@ export default class Notifice {
         let btnClr = `rgb(${this.#clr[0]},${this.#clr[1]},${this.#clr[2]})`
         let brdClr = `rgb(${this.#clr[0] - 150},${this.#clr[1] - 150},${this.#clr[2] - 150})`
 
-        const pTag = GiveElement('p', undefined, text)
-        const notificeCard = GiveElement('div', 'notifice-card')
+        const pTag = giveElement('p', undefined, text)
+        const notificeCard = giveElement('div', 'notifice-card')
 
         notificeCard.style.backgroundColor = clr;
 
         notificeCard.style.borderColor = brdClr
 
-        const bTag = GiveElement('button', undefined, 'h&#xD7')
+        const bTag = giveElement('button', undefined, 'h&#xD7')
 
         bTag.style.borderColor = brdClr
 
@@ -107,7 +107,7 @@ export default class Notifice {
 }
 
 function createCon(pos) {
-    const el = GiveElement('div', 'notifice-container')
+    const el = giveElement('div', 'notifice-container')
     el.dataset.position = pos
     document.body.append(el)
     return el

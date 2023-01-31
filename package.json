@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/DipankajSingh/notifice.js/issues"
   },
-  "homepage": "https://github.com/DipankajSingh/notifice.js#readme"
+  "homepage": "https://github.com/DipankajSingh/notifice.js#readme",
+  "dependencies": {
+    "@itsdipankaj/helperjs": "^1.0.0"
+  }
 }
