@@ -2,7 +2,7 @@
   "name": "notifice",
   "version": "1.2.1",
   "description": "NotificeJS is a lightweight and easy-to-use library for creating customizable notifications in your web applications. With a simple and intuitive API, you can easily create notifications with custom messages, styles, and behavior. Whether you need to display success messages, error alerts, or informational updates, NotificeJS has you covered. With support for both manual and automatic dismissal, you can create notifications that fit seamlessly into the flow of your application. Give your users the power to stay informed with NotificeJS.",
-  "main": "./notificeJS/notifice_v2.0.0.js",
+  "main": "./notificeJS.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
