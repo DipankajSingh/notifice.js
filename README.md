@@ -9,7 +9,7 @@ To use notificeJS, you will need to include the library in your project. You can
 ## Downloading the Library
 
 1. Download the library from the GitHub repository
-   > https://github.com/DipankajSingh/notifice.js/tree/main/notificeJS
+   > https://github.com/DipankajSingh/notifice.js
 2. Extract the contents of the downloaded zip file
 3. Include the notificeJS.js file in your HTML file.
 
