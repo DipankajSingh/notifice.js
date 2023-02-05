@@ -1,4 +1,4 @@
-# notificeJS
+# Notifice
 
 notificeJS is a JavaScript library that allows you to easily create and display notifications on your web page.
 
@@ -11,12 +11,12 @@ To use notificeJS, you will need to include the library in your project. You can
 1. Download the library from the GitHub repository
    > https://github.com/DipankajSingh/notifice.js
 2. Extract the contents of the downloaded zip file
-3. Include the notificeJS.js file in your HTML file.
+3. Include the notifice.js file in your HTML file.
 
 #### HTML
 
 ```html
-<script src="./notificeJS/notificeJS.js"></script>
+<script src="./notificeJS/notifice.js"></script>
 ```
 
 ### Using NPM
@@ -27,7 +27,7 @@ To use notificeJS, you will need to include the library in your project. You can
 #### javascript
 
 ```js
-import notificeJS from "notificeJS";
+import notificeJS from "notifice";
 ```
 
 ## Usage
